@@ -1,0 +1,3 @@
+# no .pth, .pkl files
+*.pkl
+*.pth
