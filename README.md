@@ -1,14 +1,13 @@
 # Indoor Localization with Wi-Fi Fingerprinting database
 
 
-* Ensemble averaging
+* Matrix multiplication 
 * Gradient boosting / Random forest (lightbgm and sklearn)
 * Scenario-based (time-series) CNN
     1. Sort by user
     2. Sort by time 
     3. Concatenate instances into images by scenario (group by time-series) 
     4. Feed the images to CNN as a video (sliding window)
-* (TODO) DCGAN for domain adaptation
 
 ## Dataset
 UJIIndoorLoc (https://archive.ics.uci.edu/ml/datasets/ujiindoorloc)
@@ -25,34 +24,34 @@ UJIIndoorLoc (https://archive.ics.uci.edu/ml/datasets/ujiindoorloc)
 
 ## Outcome
 - Building prediction: 
-    - Ensemble averaging: 99.91%
+    - Matrix multiplication: 99.91%
     - Random forest: N/A
     - Scenario-based (time-series) CNN: 100%
 
 - Floor prediction: 
-    - Ensemble averaging: 84.97%
+    - Matrix multiplication: 84.97%
     - Random forest: 91.53%
     - Scenario-based (time-series) CNN: 87.48%
 
 - Longitude / Latitude prediction:
     1. Mean error (Euclidean distance): 
-        - Ensemble averaging: 13.56 m
+        - Matrix multiplication: 13.56 m
         - Gradient boosting: 16.14 m
         - Scenario-based (time-series) CNN: N/A
     2. Max error (Euclidean distance): 
-        - Ensemble averaging: 92.46 m
+        - Matrix multiplication: 92.46 m
         - Gradient boosting: 182.70 m
         - Scenario-based (time-series) CNN: N/A
     3. Min error (Euclidean distance): 
-        - Ensemble averaging: 0.03 m
+        - Matrix multiplication: 0.03 m
         - Gradient boosting: 0.31 m
         - Scenario-based (time-series) CNN: N/A
     4. Standard deviation (Euclidean distance): 
-        - Ensemble averaging: 10.33 m
+        - Matrix multiplication: 10.33 m
         - Gradient boosting: 21.44 m
         - Scenario-based (time-series) CNN: N/A
     5. Variance: 
-        - Ensemble averaging: 106.72
+        - Matrix multiplication: 106.72 m
         - Gradient boosting: 459.56 m
         - Scenario-based (time-series) CNN: N/A
     
@@ -61,16 +60,6 @@ UJIIndoorLoc (https://archive.ics.uci.edu/ml/datasets/ujiindoorloc)
 
 - CNN improvement
 
-- DCGAN for domain adaptation
-    - Scalability
-    - Reuse of previously trained CNN layers
-    
-- Towards seamless real-time user experience with optimal performance using low battery consumption
-    - Inference request frequency optimization at online phase
-    - Battery consumption estimation
-    - Device characteristics consideration
-    - Shifting from/to GPS system
-    
 ## Reference
 - http://giant.uji.es/blog/convnet/convnet.html
 - https://github.com/armin-talic/Indoor-Positioning-Via-Wifi-Fingerprinting
